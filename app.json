@@ -1,0 +1,23 @@
+{
+    "name": "Shortcut Tool Bot",
+    "description": "A simple shortcut tools boot in PHP",
+    "keywords": [
+        "Shortcut",
+        "Tool",
+        "Bot"
+    ],
+    "repository": "https://github.com/Gourav8152-ai/shortcuttoolsbot",
+    "success_url": "/",
+    "env": {
+        "TOKEN": {
+            "description": "Your bot token, as a string.",
+            "value": "",
+            "required": true
+        }
+    },
+    "URL": {
+        "description": "type your url where hosted api.php",
+        "value": "",
+        "required": true
+    }
+}
