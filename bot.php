@@ -19,7 +19,7 @@ $info = urlencode($info);
 $welcome = $_ENV['WELCOME_MSG'];
 
 if($message == "/start"){
-    send_message($chat_id,$message_id, "Welcome To The Group $mention. \nUse /cmds to know the command.\n $welcome");
+    send_message($chatId,$message_id, "Welcome To The Group $mention. \nUse /cmds to know the command.\n $welcome");
 }elseif($message == "/info"){
     // if($r_userId == null){
         sendMessage($chatId,$message_id,$info);
