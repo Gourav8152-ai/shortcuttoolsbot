@@ -1,6 +1,5 @@
 <?php
 $update = json_decode(file_get_contents('php://input'), TRUE);
-echo $update;
 $message = $update["message"]["text"];
 $chatId = $update["message"]["chat"]["id"];
 $message_id = $update["message"]["message_id"];
