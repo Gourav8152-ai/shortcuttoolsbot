@@ -4,20 +4,28 @@
     "keywords": [
         "Shortcut",
         "Tool",
-        "Bot"
+        "Bot",
+        "Shortcut-tool",
+        "Telegram-bot"
     ],
     "repository": "https://github.com/Gourav8152-ai/shortcuttoolsbot",
-    "success_url": "/",
     "env": {
         "TOKEN": {
             "description": "Your bot token, as a string.",
             "value": "",
             "required": true
+        },
+        "WELCOME_MSG" : {
+            "description" : "Welcome message.",
+            "value": "",
+            "required": true
         }
     },
-    "URL": {
-        "description": "type your url where hosted api.php",
-        "value": "",
-        "required": true
-    }
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "image": "heroku/php"
 }
