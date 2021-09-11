@@ -6,7 +6,7 @@ $message_id = $update["message"]["message_id"];
 $id = $update["message"]["from"]["id"];
 $username = $update["message"]["from"]["username"];
 $firstname = $update["message"]["from"]["first_name"];
-$mention = "["+$username+"](tg://user?id="+str(id)+")";
+$mention = "[".$username."](tg://user?id=".$id.")";
 $WELCOME_MSG = $_ENV['WELCOME_MSG'];
 
 if($message == "/start"){
