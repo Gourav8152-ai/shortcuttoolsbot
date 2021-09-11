@@ -16,5 +16,5 @@ if($message == "/start"){
 function send_message($chatId,$message_id, $message){
     $apiToken = $_ENV['TOKEN'];
     $text = urlencode($message);  
-    file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=HTML");
+    file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=Markdown");
 }
