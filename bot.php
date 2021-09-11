@@ -7,7 +7,7 @@ $id = $update["message"]["from"]["id"];
 $username = $update["message"]["from"]["username"];
 $firstname = $update["message"]["from"]["first_name"];
 $mention = "["+$username+"](tg://user?id="+str(id)+")";
-
+$WELCOME_MSG = $_ENV['WELCOME_MSG'];
 
 if($message == "/start"){
     send_message($chat_id,$message_id, "Welcome To The Group $mention. \nUse /cmds to know the command.\n $WELCOME_MSG");
