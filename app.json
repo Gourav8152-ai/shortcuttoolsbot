@@ -4,21 +4,15 @@
     "keywords": [
         "Shortcut",
         "Tool",
-        "Bot",
-        "Shortcut-tool",
-        "Telegram-bot"
+        "Bot"
     ],
     "repository": "https://github.com/Gourav8152-ai/shortcuttoolsbot",
     "env": {
         "TOKEN": {
-            "description": "Your bot token, as a string.",
-            "value": "",
-            "required": true
+            "description": "Your bot token, as a string."
         },
         "WELCOME_MSG" : {
-            "description" : "Welcome message.",
-            "value": "",
-            "required": true
+            "description" : "Welcome message."
         }
     },
     "formation": {
