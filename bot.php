@@ -10,7 +10,7 @@ if (!$update) {
     $message_id = $update['message']['message_id'];
     $WELCOME_MSG = $_ENV['WELCOME_MSG'];
 
-    if (strpos($text, "/start") === 0) {
+    if (strpos($message, "/start") === 0) {
         sendMessage($chat_id,$message_id, "Welcome To The Group. \nUse /cmds to know the command.\n $WELCOME_MSG");
     }
 }
