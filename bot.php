@@ -30,7 +30,7 @@ if (!$update) {
     }elseif (strpos($message, "/cmds") === 0) {
         sendMessage($chat_id,$r_message_id, "Not yet added");
     }elseif (strpos($message, "/info") === 0) {
-        sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_userId\n<b>First Name: </b>$r_firstname\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_userId'>$r_firstname</a>");
+        sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_user_id\n<b>First Name: </b>$r_first_name\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_user_id'>$r_first_name</a>");
     }elseif (strpos($message, "/status") === 0) {
         sendMessage($chat_id,$r_message_id,"ACTIVE");
     }
