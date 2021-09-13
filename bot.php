@@ -20,7 +20,7 @@ if (!$update) {
     if (!$r_user_id){
         $r_user_id = $user_id;
         $r_first_name = $first_name;
-        $r_username = $first_name;
+        $r_username = $username;
         $r_message_id = $message_id;
     }
 
