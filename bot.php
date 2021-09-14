@@ -1,5 +1,6 @@
 <?php
 
+include 'dictionary.php';
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 if (!$update) {
@@ -46,6 +47,16 @@ if (!$update) {
         case '/pin':
             pinChatMessage($chat_id,$r_message_id);
             break;          
+    }
+    if (strpos($message, "/dictionary") === 0) {
+        $dictio = substr($message, 12);
+          $dictio = urlencode($coron);
+            if(strlen($message)<13){
+                  sendMessage($chatId, 'No words inputted');
+            }
+            else{
+                dictionary($dictio);
+            }
     }
 }
 function sendMessage($chat_id,$r_message_id, $message){
