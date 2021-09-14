@@ -50,7 +50,6 @@ if (!$update) {
     }
     if (strpos($message, "/dictionary") === 0) {
         $dictio = substr($message, 12);
-          $dictio = urlencode($dictio);
             if(strlen($message)<13){
                   sendMessage($chat_id,$r_message_id,"No words inputted");
             }
