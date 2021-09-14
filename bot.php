@@ -55,7 +55,8 @@ if (!$update) {
                   sendMessage($chat_id,$r_message_id,"No words inputted");
             }
             else{
-                sendMessage($chat_id,$r_message_id,dictionary($dictio));
+                $words = dictionary($dictio);
+                sendMessage($chat_id,$r_message_id,$words);
             }
     }
 }
