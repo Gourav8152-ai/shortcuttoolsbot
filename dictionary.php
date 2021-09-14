@@ -7,13 +7,7 @@ function dictionary($word){
         exit;
     }else{
         $meaning = $result[0]['meanings'][0]['definitions'][0]['definition'];
-        $meaning1 = $result[0]['meanings'][1]['definitions'][0]['definition'];
-        $meaning2 = $result[0]['meanings'][2]['definitions'][0]['definition'];
-        echo $meaning;
-        echo "<br><br>";
-        echo $meaning1;
-        echo "<br><br>";
-        echo $meaning2;
+        return $meaning;
     }
 }
 ?>
