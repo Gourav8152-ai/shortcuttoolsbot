@@ -58,7 +58,7 @@ function pinChatMessage($chat_id,$r_message_id){
     file_get_contents("https://api.telegram.org/bot$botToken/pinChatMessage?chat_id=$chat_id&message_id=$r_message_id&disable_notification=true");
 
 }
-function sendDice($chat_id,$emoji){
+function sendDice($chat_id){
     $botToken = $_ENV['TOKEN'];
     file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id"); 
 }
