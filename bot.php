@@ -37,12 +37,35 @@ if (!$update) {
         case '/status':
             sendMessage($chat_id,$r_message_id,"ACTIVE");
             break;
+        case '/leave':
+            leaveChat($chat_id);
+            break;
+        case '/dice':
+            sendDice($chat_id,$r_message_id);
+            break;
+        case 'pinChatMessage':
+            pinChatMessage($chat_id,$r_message_id);
+            break;          
     }
 }
-function sendMessage($chat_id,$message_id, $message){
+function sendMessage($chat_id,$r_message_id, $message){
     $botToken = $_ENV['TOKEN'];
     $text = urlencode($message); 
     file_get_contents("https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=HTML");
 }
+function pinChatMessage($chat_id,$r_message_id){
+    $botToken = $_ENV['TOKEN'];
+    file_get_contents("https://api.telegram.org/bot$botToken/pinChatMessage?chat_id=$chat_id&reply_to_message_id=$r_message_id");
+
+}
+function sendDice($chat_id,$r_message_id){
+    $botToken = $_ENV['TOKEN'];
+    file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id&reply_to_message_id=$r_message_id&emoji='Dice'"); 
+}
+function leaveChat($chat_id){
+    $botToken = $_ENV['TOKEN'];
+    file_get_contents("https://api.telegram.org/bot$botToken/leaveChat?chat_id=$chat_id"); 
+}
+
 
 ?>
