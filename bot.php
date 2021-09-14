@@ -24,15 +24,19 @@ if (!$update) {
         $r_message_id = $message_id;
     }
 
-
-    if (strpos($message, "/start") === 0) {
-        sendMessage($chat_id,$r_message_id, "Welcome To The Group. \nUse /cmds to know the command.\n $WELCOME_MSG");
-    }elseif (strpos($message, "/cmds") === 0) {
-        sendMessage($chat_id,$r_message_id, "Not yet added");
-    }elseif (strpos($message, "/info") === 0) {
-        sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_userId\n<b>First Name: </b>$r_firstname\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_userId'>$r_firstname</a>");
-    }elseif (strpos($message, "/status") === 0) {
-        sendMessage($chat_id,$r_message_id,"ACTIVE");
+    switch ($message) {
+        case '/start':
+            sendMessage($chat_id,$r_message_id, "Welcome To The Group. \nUse /cmds to know the command.\n $WELCOME_MSG");
+            break;
+        case '/cmds':
+            sendMessage($chat_id,$r_message_id, "<b>Here is the list of commands :</b>\n<code>/info </code>(To Know the info of the user)\n<code>/status </code>(To check bot is alive or not)");
+            break;
+        case 'info':
+            sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_userId\n<b>First Name: </b>$r_firstname\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_userId'>$r_firstname</a>");
+            break;
+        case '/status':
+            sendMessage($chat_id,$r_message_id,"ACTIVE");
+            break;
     }
 }
 function sendMessage($chat_id,$message_id, $message){
