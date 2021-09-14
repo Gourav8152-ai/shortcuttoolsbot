@@ -41,7 +41,7 @@ if (!$update) {
             leaveChat($chat_id);
             break;
         case '/dice':
-            sendDice($chat_id,"Dice");
+            sendDice($chat_id);
             break;
         case '/pin':
             pinChatMessage($chat_id,$r_message_id);
@@ -60,7 +60,7 @@ function pinChatMessage($chat_id,$r_message_id){
 }
 function sendDice($chat_id,$emoji){
     $botToken = $_ENV['TOKEN'];
-    file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id&emoji=$emoji"); 
+    file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id"); 
 }
 function leaveChat($chat_id){
     $botToken = $_ENV['TOKEN'];
