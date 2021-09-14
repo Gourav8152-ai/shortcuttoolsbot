@@ -41,9 +41,9 @@ if (!$update) {
             leaveChat($chat_id);
             break;
         case '/dice':
-            sendDice($chat_id,$r_message_id);
+            sendDice($chat_id,$r_message_id,"Dice");
             break;
-        case 'pinChatMessage':
+        case '/pin':
             pinChatMessage($chat_id,$r_message_id);
             break;          
     }
@@ -58,9 +58,9 @@ function pinChatMessage($chat_id,$r_message_id){
     file_get_contents("https://api.telegram.org/bot$botToken/pinChatMessage?chat_id=$chat_id&reply_to_message_id=$r_message_id");
 
 }
-function sendDice($chat_id,$r_message_id){
+function sendDice($chat_id,$r_message_id,$emoji){
     $botToken = $_ENV['TOKEN'];
-    file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id&reply_to_message_id=$r_message_id&emoji='Dice'"); 
+    file_get_contents("https://api.telegram.org/bot$botToken/sendDice?chat_id=$chat_id&reply_to_message_id=$r_message_id&emoji=$emoji"); 
 }
 function leaveChat($chat_id){
     $botToken = $_ENV['TOKEN'];
