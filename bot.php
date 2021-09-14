@@ -52,10 +52,10 @@ if (!$update) {
         $dictio = substr($message, 12);
           $dictio = urlencode($coron);
             if(strlen($message)<13){
-                  sendMessage($chatId, 'No words inputted');
+                  sendMessage($chat_id,$r_message_id,"No words inputted");
             }
             else{
-                dictionary($dictio);
+                sendMessage($chat_id,$r_message_id,dictionary($dictio));
             }
     }
 }
