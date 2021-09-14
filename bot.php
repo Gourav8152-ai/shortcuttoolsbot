@@ -20,7 +20,7 @@ if (!$update) {
     if (!$r_user_id){
         $r_user_id = $user_id;
         $r_first_name = $first_name;
-        $r_username = $first_name;
+        $r_username = $username;
         $r_message_id = $message_id;
     }
 
@@ -32,7 +32,7 @@ if (!$update) {
             sendMessage($chat_id,$r_message_id, "<b>Here is the list of commands :</b>\n<code>/info </code>(To Know the info of the user)\n<code>/status </code>(To check bot is alive or not)");
             break;
         case 'info':
-            sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_userId\n<b>First Name: </b>$r_firstname\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_userId'>$r_firstname</a>");
+            sendMessage($chat_id,$r_message_id,"<b>ID : </b>$r_user_id\n<b>First Name: </b>$r_first_name\n<b>Username : </b>@$r_username\n<b>Permanent Link : </b><a href='tg://user?id=$r_user_id'>$r_first_name</a>");
             break;
         case '/status':
             sendMessage($chat_id,$r_message_id,"ACTIVE");
