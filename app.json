@@ -11,6 +11,12 @@
         "TOKEN": {
             "description": "Your bot token, as a string."
         },
+        "USERNAME": {
+            "description": "Your bot token, as a string."
+        },
+        "PASSWORD": {
+            "description": "Your bot token, as a string."
+        },
         "WELCOME_MSG" : {
             "description" : "Welcome message."
         }
