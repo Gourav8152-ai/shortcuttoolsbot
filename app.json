@@ -12,10 +12,10 @@
             "description": "Your bot token, as a string."
         },
         "USERNAME": {
-            "description": "Your bot token, as a string."
+            "description": "Enter the db username, as a string."
         },
         "PASSWORD": {
-            "description": "Your bot token, as a string."
+            "description": "Enter the db password, as a string."
         },
         "WELCOME_MSG" : {
             "description" : "Welcome message."
